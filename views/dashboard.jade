@@ -6,7 +6,7 @@ block content
     .col-md-4
       .panel.panel-primary
         .panel-heading 
-          h4 Submit Files 
+          h3(class="panel-title") Submit Files 
         .panel-body
           form(action="")
             .form-group
@@ -19,22 +19,10 @@ block content
               label(for="fileChooser") Select the Java file.
               input(type="file", id="fileChooser")
             button(type="submit" class="btn btn-primary") Submit
-    .col-md-8
-      .panel.panel-primary
-        .panel-heading 
-          h4 Rank 
-        .panel-body Body
-        .panel-footer Footer
-    .col-md-4
-      .panel.panel-default
-        .panel-heading 
-          h4 Time Left 
-        .panel-body Body
-        .panel-footer Footer
     .col-md-4
       .panel.panel-warning
         .panel-heading 
-          h4 Appeals 
+          h3(class="panel-title") Appeals 
         .panel-body 
           form(action="")
             .form-group
@@ -48,3 +36,30 @@ block content
               label(for="appealArea")
               textarea(class="form-control" rows="5" id="appealArea")
             button(type="submit" class="btn btn-primary") Submit
+    .col-md-4
+      .panel.panel-default
+        .panel-heading
+          h3(class="panel-title") Team Members
+        .panel-body
+          form(action="" class="form-horizontal")
+            .form-group
+              label(for="teammember1" class="col-sm-4 control-label") Member 1
+              .col-sm-7
+                input(type="text" id="teammember1" class="form-control")
+            .form-group
+              label(for="teammember1" class="col-sm-4 control-label") Member 2
+              .col-sm-7
+                input(type="text" id="teammember2" class="form-control")
+            .form-group
+              label(for="teammember1" class="col-sm-4 control-label") Member 3
+              .col-sm-7
+                input(type="text" id="teammember3" class="form-control")    
+            button(type="submit" class="btn btn-primary") Submit
+    .col-md-8
+      .panel.panel-primary
+        .panel-heading 
+          h3(class="panel-title") Rank 
+        .panel-body Body
+        .panel-footer Footer
+              
+            
