@@ -7,18 +7,44 @@ block content
       .panel.panel-primary
         .panel-heading 
           h4 Submit Files 
-        .panel-body Body
-        .panel-footer Footer
-    .col-md-4
-      .panel.panel-info
+        .panel-body
+          form(action="")
+            .form-group
+              label(for="problemSelector") Select the problem. 
+              select(class="form-control" id="problemSelector")
+                option Problem 1
+                option Problem 2
+                option Problem 3
+            .form-group
+              label(for="fileChooser") Select the Java file.
+              input(type="file", id="fileChooser")
+            button(type="submit" class="btn btn-primary") Submit
+    .col-md-8
+      .panel.panel-primary
         .panel-heading 
-          h4 Time Left 
+          h4 Rank 
         .panel-body Body
         .panel-footer Footer
     .col-md-4
       .panel.panel-default
         .panel-heading 
-          h4 Rank 
+          h4 Time Left 
         .panel-body Body
         .panel-footer Footer
-    
+    .col-md-4
+      .panel.panel-warning
+        .panel-heading 
+          h4 Appeals 
+        .panel-body 
+          form(action="")
+            .form-group
+              label(for="problemSelector") Select Topic of Appeal.
+              select(class="form-control" id="problemSelector")
+                option General
+                option Problem 1
+                option Problem 2
+                option Problem 3
+            .form-group
+              label(for="appealArea")
+              textarea(class="form-control" rows="5" id="appealArea")
+            button(type="submit" class="btn btn-primary") Submit
