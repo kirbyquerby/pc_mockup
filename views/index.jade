@@ -1,0 +1,52 @@
+include mixins
+extends layout
+
+block content
+  .jumbotron
+      h1= title
+      p Welcome to #{title}
+      .container
+        .row
+          .btn-group
+            .btn.btn-success(type="button", data-toggle="modal", data-target="#loginmodal") Log In
+            .btn.btn-primary(type="button", data-toggle="modal", data-target="#signupmodal") Sign up
+            
+          
+          
+    .modal(class="fade", id="loginmodal", role="dialog")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h1 Log In
+          .modal-body
+            form(action="/dashboard")
+              form-group
+                label(for="teamnumber") Email
+                input(class="form-control", type="text", id ="teamnumber", placeholder="Enter your team number")
+              form-group
+                label(for="passwordInput") Password
+                input(class="form-control", type="password", id ="passwordInput", placeholder="Password")
+              button(type="submit" class="btn btn-primary") Log In
+          .modal-footer
+          
+    .modal(class="fade", id="signupmodal", role="dialog")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h1 Sign Up
+          .modal-body
+            form(action="/dashboard")
+              form-group
+                label(for="emailInput") Email
+                input(class="form-control", type="email", id ="emailInput", placeholder="Email")
+              form-group
+                label(for="passwordInput") Password
+                input(class="form-control", type="password", id ="passwordInput", placeholder="Password")
+              form-group
+                label(for="schoolselect") Select Your School
+                select(class="form-control")
+                  option Seven Lakes
+                  option Taylor
+                  option Cinco
+              button(type="submit" class="btn btn-primary") Register
+          .modal-footer
