@@ -60,7 +60,13 @@ block content
         .panel-heading
           h1(class="panel-title") Clarifications
         .panel-body
-          
+        .panel.panel-primary
+          .panel-heading(role="tab" id="clarification")
+            h1(class="panel-title")
+              a(role="button" data-toggle="collapse" data-parent="#accordian" href="#collapseclarification1" aria-expanded="true" aria-contorls="collapseclarification1") Clarification #1 
+          .panel-collapse.collapse.in(id="collapseclarification1" role="tabpanel" aria-labelledby="clarification")
+            .panel-body
+              p Hello this will be an clarification
     .col-md-7
       .panel.panel-primary
         .panel-heading(role="tab" id="tableHeading")

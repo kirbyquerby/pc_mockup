@@ -4,7 +4,7 @@ doctype html
 html
   head
     title= title
-    +bootswatch("cosmo")
+    +bootswatch("darkly")
   body(style="padding-top: 8rem; padding-bottom: 8rem;")
     nav( role="navigation", class="nav-bar navbar-inverse navbar-fixed-bottom" )
       .container-fluid
@@ -27,7 +27,8 @@ html
       +nav_item("/competition/info") Info
       +nav_item("/competition/problems") Problems
       +nav_item("/competition/appeals") Appeals
-      +nav_item() Clarifications
+      +nav_item() Clarifications 
+        .badge 1
       +nav_item() Logout
     .container
       block content
