@@ -54,7 +54,7 @@ block content
               label(for="teammember1" class="col-sm-4 control-label") Member 3
               .col-sm-7
                 input(type="text" id="teammember3" class="form-control")    
-            button(type="submit" class="btn btn-primary") Update
+            button(type="submit" class="btn btn-danger pull-right") Update
     .col-md-5
       .panel.panel-default
         .panel-heading
@@ -63,17 +63,18 @@ block content
           
     .col-md-7
       .panel.panel-primary
-        .panel-heading 
-          h1(class="panel-title") Rank 
-        .panel-body Body
-          table(class="table")
-            tr
-              td
-                p Rank
-              td 
-                p Team Number
-              td 
-                p Score
-        .panel-footer Footer
+        .panel-heading(role="tab" id="tableHeading")
+          h1(class="panel-title")
+            a(role="button" data-toggle="collapse" data-parent="#accordian" href="#collapseRank" aria-expanded="true" aria-contorls="collapseRank") Rank 
+        .panel-collapse.collapse.in(id="collapseRank" role="tabpanel" aria-labelledby="tableHeading")
+          .panel-body Body
+            table(class="table")
+              tr
+                td
+                  p Rank
+                td 
+                  p Team Number
+                td 
+                  p Score
               
             

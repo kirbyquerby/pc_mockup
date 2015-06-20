@@ -6,7 +6,7 @@ router.get('/info', function(req, res){
     res.render('info',{title: "Info"});
 });
 router.get('/problems', function(req, res){
-    res.render('problem');
+    res.render('problems', {title: "Problems"});
 });
 
 module.exports = router;
