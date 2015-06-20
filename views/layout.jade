@@ -5,8 +5,25 @@ html
   head
     title= title
     +bootswatch("paper")
-  body(style="padding-bottom:10rem;")
+  body(style="padding-top: 8rem; padding-bottom: 5rem;")
+    nav( role="navigation", class="nav-bar navbar-inverse navbar-fixed-bottom" )
+      .container
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              p.navbar-text Rank : 1
+            li
+              p.navbar-text Score : 141
+            li
+              p.navbar-text 1:04.5
+            
     +nav("PC^3 Mock Up", "dropdown_menu")
+      +nav_item("/competition/dashboard") Dashboard
+      +nav_item("/competition/info") Info
+      +nav_item("/competition/problems") Problems
+      +nav_item() Appeals
+      +nav_item() Clarifications
+      +nav_item() Logout
     .container
       block content
     script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
