@@ -69,12 +69,19 @@ block content
         .panel-collapse.collapse.in(id="collapseRank" role="tabpanel" aria-labelledby="tableHeading")
           .panel-body Body
             table(class="table")
-              tr
-                td
-                  p Rank
-                td 
-                  p Team Number
-                td 
-                  p Score
-              
+              thead
+                tr
+                  td Rank
+                  td Team Number
+                  td Score
+              tbody
+                tr.active
+                  td 1
+                  td 4
+                  td 141
+                tr
+                  td 2
+                  td 3
+                  td 140
+                
             

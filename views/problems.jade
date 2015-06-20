@@ -1,1 +1,49 @@
 extends layout
+
+block content
+  .container
+    .col-md-3
+      h3 Problems
+      ul.nav.nav-pills.nav-stacked(id="tabs" data-tabs="tabs")
+        li.active
+          a(href="#red" data-toggle="tab") Red
+        li 
+          a(href="#orange" data-toggle="tab") Orange
+    .col-md-8
+        .tab-content
+          .tab-pane.active(id="red")
+            h1 Red
+            p Vanya is doing his maths homework. He has an expression of form , where x1, x2, ..., xn are digits from 1 to 9, and sign  represents either a plus '+' or the multiplication sign '*'. Vanya needs to add one pair of brackets in this expression so that to maximize the value of the resulting expression.
+
+            strong Input
+            p The first line contains expression s (1 ≤ |s| ≤ 5001, |s| is odd), its odd positions only contain digits from 1 to 9, and even positions only contain signs  +  and  * .
+
+            p The number of signs  *  doesn't exceed 15.
+
+            strong Output
+            p In the first line print the maximum possible value of an expression.
+            
+            strong Input
+            pre 4 
+              br 
+              | 0 0
+              br 
+              | 1 1
+              br 
+              | 2 0
+              br 
+              | 2 2
+            strong Output
+            pre 3
+            
+          .tab-pane(id="orange")
+            h1 Orange
+            p Vanya got bored and he painted n distinct points on the plane. After that he connected all the points pairwise and saw that as a result many triangles were formed with vertices in the painted points. He asks you to count the number of the formed triangles with the non-zero area.
+            
+            strong Input
+            p The first line contains integer n (1 ≤ n ≤ 2000) — the number of the points painted on the plane.
+
+            p Next n lines contain two integers each xi, yi ( - 100 ≤ xi, yi ≤ 100) — the coordinates of the i-th point. It is guaranteed that no two given points coincide.
+
+            strong Output
+            p In the first line print an integer — the number of triangles with the non-zero area among the painted points.
