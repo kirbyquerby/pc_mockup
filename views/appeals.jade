@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  .container
+    .col-md-6
+      h2 Submit Appeal
+      form(action="")
+        .form-group
+          label(for="problemSelector") Select Topic of Appeal.
+          select(class="form-control" id="problemSelector")
+            option General
+            option Problem 1
+            option Problem 2
+            option Problem 3
+        .form-group
+          label(for="appealArea")
+          textarea(class="form-control" rows="5" id="appealArea")
+        button(type="submit" class="btn btn-primary") Submit
+    .col-md-6
+      h2 Appeals
+      .panel.panel-primary
+        .panel-heading(role="tab" id="appeal")
+          h1(class="panel-title")
+            a(role="button" data-toggle="collapse" data-parent="#accordian" href="#collapseappeal1" aria-expanded="true" aria-contorls="collapseappeal1") Appeal #1 
+        .panel-collapse.collapse.in(id="collapseappeal1" role="tabpanel" aria-labelledby="appeal")
+          .panel-body
+            p Hello this will be an appeal.
+      .panel.panel-danger
+        .panel-heading(role="tab" id="appeal1")
+          h1(class="panel-title")
+            a(role="button" data-toggle="collapse" data-parent="#accordian" href="#collapseappeal2" aria-expanded="true" aria-contorls="collapseappeal2") Appeal #2 
+        .panel-collapse.collapse.in(id="collapseappeal2" role="tabpanel" aria-labelledby="appeal1")
+          .panel-body
+            p Hello this appeal was rejected.
+      .panel.panel-success
+        .panel-heading(role="tab" id="appeal2")
+          h1(class="panel-title")
+            a(role="button" data-toggle="collapse" data-parent="#accordian" href="#collapseappeal3" aria-expanded="true" aria-contorls="collapseappeal3") Appeal #3 
+        .panel-collapse.collapse.in(id="collapseappeal3" role="tabpanel" aria-labelledby="appeal2")
+          .panel-body
+            p Hello this one was accepted.

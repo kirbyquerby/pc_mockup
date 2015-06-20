@@ -7,8 +7,12 @@ block content
       ul.nav.nav-pills.nav-stacked(id="tabs" data-tabs="tabs")
         li.active
           a(href="#red" data-toggle="tab") Red
+            .label.label-success.pull-right
+              .glyphicon.glyphicon-ok
         li 
-          a(href="#orange" data-toggle="tab") Orange
+          a(href="#orange" data-toggle="tab") Orange 
+            .label.label-danger.pull-right 
+              .glyphicon.glyphicon-remove
     .col-xs-8
         .tab-content
           .tab-pane.active(id="red")
@@ -35,9 +39,11 @@ block content
               | 2 2
             strong Output
             pre 3
-            
+            p (codeforces 552E)
           .tab-pane(id="orange")
             h1 Orange
+            .label.label-danger
+              | RunTime Error
             p Vanya got bored and he painted n distinct points on the plane. After that he connected all the points pairwise and saw that as a result many triangles were formed with vertices in the painted points. He asks you to count the number of the formed triangles with the non-zero area.
             
             strong Input
@@ -47,3 +53,23 @@ block content
 
             strong Output
             p In the first line print an integer — the number of triangles with the non-zero area among the painted points.
+              |(codeforces 552D)
+        .btn.btn-primary(type=button, data-toggle="modal", data-target="#submitmodal") Submit
+        .modal.fade(id="submitmodal" role="dialog")
+          .modal-dialog.modal-sm
+            .modal-content
+              .modal-header
+                h2 Submit
+              .modal-body
+                form(action="")
+                  .form-group
+                    label(for="problemSelector") Select the problem. 
+                    select(class="form-control" id="problemSelector")
+                      option Problem 1
+                      option Problem 2
+                      option Problem 3
+                  .form-group
+                    label(for="fileChooser") Select the Java file.
+                    input(type="file", id="fileChooser")
+                  button(type="submit" class="btn btn-primary") Submit
+              .modal-footer

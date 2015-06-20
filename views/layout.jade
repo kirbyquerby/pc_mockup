@@ -4,8 +4,8 @@ doctype html
 html
   head
     title= title
-    +bootswatch("darkly")
-  body(style="padding-top: 8rem; padding-bottom: 5rem;")
+    +bootswatch("cosmo")
+  body(style="padding-top: 8rem; padding-bottom: 8rem;")
     nav( role="navigation", class="nav-bar navbar-inverse navbar-fixed-bottom" )
       .container-fluid
         .collapse.navbar-collapse
@@ -26,7 +26,7 @@ html
       +nav_item("/competition/dashboard") Dashboard
       +nav_item("/competition/info") Info
       +nav_item("/competition/problems") Problems
-      +nav_item() Appeals
+      +nav_item("/competition/appeals") Appeals
       +nav_item() Clarifications
       +nav_item() Logout
     .container

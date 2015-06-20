@@ -8,5 +8,7 @@ router.get('/info', function(req, res){
 router.get('/problems', function(req, res){
     res.render('problems', {title: "Problems"});
 });
-
+router.get('/appeals', function(req, res){
+  res.render('appeals', {title:'Appeals'});
+});
 module.exports = router;
